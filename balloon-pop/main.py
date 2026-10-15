@@ -27,6 +27,8 @@ def main():
                 running = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 engine.handle_click(event.pos)
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_r:
+                engine.restart()
 
         engine.update()
         engine.draw(screen, font)
